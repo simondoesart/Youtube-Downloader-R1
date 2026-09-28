@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pocket — Your video, offline</title><link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="/" aria-label="Pocket home"><span class="logo">↓</span> pocket<span class="brand-dot">.</span></a></header>
+  <main>
+    <section class="intro"><p class="eyebrow">SAVE IT FOR LATER</p></section>
+    <section class="download-card" aria-labelledby="form-title">
+      <div class="card-heading"><h2 id="form-title">What are we saving?</h2><span>01 / ADD A LINK</span></div>
+      <form id="download-form">
+        <label for="url">YouTube link</label>
+        <div class="url-field"><span aria-hidden="true">↗</span><input id="url" name="url" type="url" placeholder="https://www.youtube.com/watch?v=…" required autocomplete="off"></div>
+        <div class="options"><fieldset><legend>Format</legend><div class="segmented"><label><input type="radio" name="format" value="mp4" checked><span>▻ &nbsp; Video <small>MP4</small></span></label><label><input type="radio" name="format" value="mp3"><span>♫ &nbsp; Audio <small>MP3</small></span></label></div></fieldset><div class="quality"><label for="quality">Quality</label><select id="quality"><option value="1080">1080p · Full HD</option><option value="720">720p · HD</option><option value="360">360p · Compact</option></select></div></div>
+        <fieldset class="clip-options">
+          <legend>Download a portion <span class="optional">Optional</span></legend>
+          <div class="clip-times"><div><label for="start">Start time</label><input id="start" name="start" type="text" placeholder="01:30" maxlength="11" aria-describedby="clip-note"></div><div><label for="end">End time</label><input id="end" name="end" type="text" placeholder="02:00" maxlength="11" aria-describedby="clip-note"></div></div>
+          <p id="clip-note">Leave both blank for the full video. For clips, we add 5 seconds before and after, within the video's bounds. Use seconds, MM:SS, or HH:MM:SS.</p>
+        </fieldset>
+        <button id="submit" type="submit">Save to my shelf <span aria-hidden="true">↓</span></button>
+        <p class="form-note" id="format-note">Best available MP4 up to your selected resolution.</p>
+        <p id="error" class="error" role="alert" hidden></p>
+      </form>
+    </section>
+    <div class="details"><span>↙ &nbsp; Direct to your device</span><span>◷ &nbsp; Files kept for 24 hours</span><span>⌂ &nbsp; Hosted by you</span></div>
+    <section class="shelf"><div class="shelf-heading"><div><p class="eyebrow">YOUR COLLECTION</p><h2>Recent downloads <span id="count">0</span></h2></div><span id="connection" role="status">Connecting…</span></div><p id="setup" class="setup" hidden></p><div id="jobs"></div><div id="empty"><span class="empty-icon" aria-hidden="true">↓</span><h3>A little room for your favorites.</h3><p>Your downloads will appear here. Start with a link above.</p></div></section>
+  </main>
+  <footer><span>pocket. </span></footer>
+</body>
+</html>

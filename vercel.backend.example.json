@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "",
+  "installCommand": "",
+  "outputDirectory": "static",
+  "rewrites": [
+    { "source": "/", "destination": "https://YOUR-BACKEND-DOMAIN/" },
+    { "source": "/api/:path*", "destination": "https://YOUR-BACKEND-DOMAIN/api/:path*" },
+    { "source": "/files/:path*", "destination": "https://YOUR-BACKEND-DOMAIN/files/:path*" }
+  ]
+}
