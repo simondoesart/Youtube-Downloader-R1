@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: pocket-downloader
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: "10000"
+      - key: DATA_DIR
+        value: /data
+      - key: APP_PASSWORD
+        generateValue: true

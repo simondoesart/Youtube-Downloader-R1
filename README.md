@@ -4,6 +4,8 @@ A small self-hosted website for saving individual YouTube videos as MP4 (up to 1
 
 **Deploying from GitHub to Vercel? Follow [DEPLOY.md](DEPLOY.md).** The included Vercel configuration publishes the interface; functional downloads require the Docker backend described in that guide.
 
+**Using Render Free for the backend? Follow [RENDER.md](RENDER.md).** The included `render.yaml` configures the Free service and generates a password. Docker runs on Render; no local Docker installation is needed.
+
 ## Start with Docker
 
 Install Docker with Compose on your computer, NAS, or server. From this folder:
